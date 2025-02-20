@@ -19,21 +19,25 @@ To run the code and the notebooks the recommended steps are the following:
 
   1)download directory Figure06
   
-  2)run compute_parameter.m to generate Figure06.yam
+  2)run compute_parameter.m to generate parameters in Tension.yaml
 
-  3)mpirun -np 1 vDefP -prefix Figure06_input -options_file_yaml Shear.yaml
+  3)run Trelis 16.5 with Figure06_input.txt to generate Figure06_input.gen
   
-  4)visulization the result file Figure06_0*_out.gen by Vislt.
+  4)mpirun -np 1 vDefP -prefix Figure06_input -options_file_yaml Tension.yaml
+  
+  5)visulization the result file Figure06_0*_out.gen by Vislt.
 
  7.for Figure07
   
   1)download directory Figure07
   
-  2)run compute_parameter.m to generate Figure07.yam
+  2)run compute_parameter.m to generate parameters in Tension.yaml
 
-  3)mpirun -np 1 vDefP -prefix Figure07_input -options_file_yaml Shear.yaml
+  3)run Trelis 16.5 with Figure07_input.txt to generate Figure07_input.gen
+
+  4)mpirun -np 1 vDefP -prefix Figure07_input -options_file_yaml Tension.yaml
   
-  4)visulization the result file Figure07_0*_out.gen by Vislt.
+  5)visulization the result file Figure07_0*_out.gen by Vislt.
 
  8.for figure 8 
  

@@ -1,0 +1,91 @@
+### global options
+verbose: 1
+boundaryDisplacement_scaling: linear
+heatxfer:
+    timestepping:
+        type: null
+defmech:
+    timestepping:
+        type: quasistatic
+    solver:
+        type: AltMin
+    damage:
+        atol: 1.0e-3
+    sor:
+        omega: 1.4
+    pclag: 5
+    irrevthres: 0.
+temperature:
+    offset: 0
+plasticStrain:
+    offset: 4
+disp:
+    snes:
+        linesearch:
+            type: cp
+        max_it: 1000
+        atol: 1.e-6
+        rtol: 1.e-6
+    pc:
+        type: ml
+damage:
+    atol: 1.e-3
+time:
+    min: 0
+    max: 0.25
+    numstep: 51
+cs0001:
+    name: Matrix
+    hookesLaw:  
+        type: isotropic
+        YoungsModulus: 0.55
+        PoissonRatio: 0.
+    FractureToughness: 2.6e-5
+    internallength: .04
+    residualstiffness: 0.
+    damage:
+        type: AT1
+    plasticity:
+        type: VonMisesPlaneTheory
+    yieldStress: 0.1
+    DuctileCouplingPower: 2
+    unilateralContact:
+        type: HydrostaticDeviatoric
+    displacementbc: no,no,no
+    damageBC: no
+cs0002:
+    name: Inclusion
+    # inclusion
+    hookesLaw:  
+        type: isotropic
+        YoungsModulus: 0.689
+        PoissonRatio: 0.
+    FractureToughness: 3.2e-4
+    internallength: .04
+    residualstiffness: 0.
+    damage:
+        type: AT1
+    plasticity:
+        type: VonMisesPlaneTheory
+    yieldStress: 0.1
+    DuctileCouplingPower: 2
+    unilateralContact:
+        type: HydrostaticDeviatoric
+    displacementbc: no,no,no
+    damageBC: no
+cs0030:
+    # top edges
+    name: T_edges
+    displacementbc: yes,yes,yes
+    boundaryDisplacement: 0.0,0.1,0
+    damageBC: yes
+    boundaryDamage: 0.
+    tempBC: no
+cs0060:
+    # Left bottom edges
+    name: B_edges
+    displacementbc: yes,yes,yes
+    boundaryDisplacement: 0.0,-0.1,0
+    damageBC: yes
+    boundaryDamage: 0.
+    tempBC: no

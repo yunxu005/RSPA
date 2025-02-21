@@ -15,32 +15,32 @@ To run the code and the notebooks the recommended steps are the following:
 
 6. For Figure06
 
-  1) Download directory Figure06
+  (1) Download directory Figure06
   
-  2) Run compute_parameter.m to generate parameters in Tension.yaml
+  (2) Run compute_parameter.m to generate parameters in Tension.yaml
 
-  3) mpirun -np 1 vDefP -prefix Figure06_input -options_file_yaml Tension.yaml
+  (3) mpirun -np 1 vDefP -prefix Figure06_input -options_file_yaml Tension.yaml
 
-  4) Change the loading velocity to obtain Figure06_0*_out.gen under different velocities
+  (4) Change the loading velocity to obtain Figure06_0*_out.gen under different velocities
   
-  5) Visulization the result file Figure06_0*_out.gen
+  (5) Visulization the result file Figure06_0*_out.gen
 
 7. For Figure07
   
-  1) Download directory Figure07
+  (1) Download directory Figure07
   
-  2) Run compute_parameter.m to generate parameters in Tension.yaml
+  (2) Run compute_parameter.m to generate parameters in Tension.yaml
 
-  3) mpirun -np 1 vDefP -prefix Figure07_input -options_file_yaml Tension.yaml
+  (3) mpirun -np 1 vDefP -prefix Figure07_input -options_file_yaml Tension.yaml
 
-  4) Change the loading velocity to obtain Figure07_0*_out.gen under different velocities
+  (4) Change the loading velocity to obtain Figure07_0*_out.gen under different velocities
   
-  5) Visulization the result file Figure07_0*_out.gen
+  (5) Visulization the result file Figure07_0*_out.gen
 
 8. For Figure08 
  
-  1) Download directory Figure08
+  (1) Download directory Figure08
   
-  2) mpirun -np 1 vDefP -prefix Figure08_input -options_file_yaml Shear.yaml
+  (2) mpirun -np 1 vDefP -prefix Figure08_input -options_file_yaml Shear.yaml
    
-  3) Visulization the result file Figure08_out.gen
+  (3) Visulization the result file Figure08_out.gen

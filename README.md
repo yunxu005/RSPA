@@ -1,5 +1,5 @@
 # RSPA
-A reference implementation of the unified surface energy model to fracture, as described in:  "A unified surface energy model for predicting micro-mechanics of heterogeneous composites from elasticity to fracture" 
+A reference implementation of the unified surface energy model to fracture, as described in:  "A unified model for predicting micro-mechanics of heterogeneous composites from elasticity to fracture" 
 
 To run the code and the notebooks the recommended steps are the following:
 
